@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SabaCars - Car Dealership</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a class="logo" href="#hero">SabaCars</a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="nav-link active">HOME</a></li>
+          <li><a href="#services" class="nav-link">SERVICES</a></li>
+          <li><a href="#cars" class="nav-link">CARS</a></li>
+          <li><a href="#contact" class="nav-link">CONTACT</a></li>
+        </ul>
+
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchCar" placeholder="Search cars..." />
+        </div>
+
+        <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars" id="hamIcon"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="site-main">
+
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <span class="badge">Premium Auto Dealership</span>
+          <h1>Find Your <br><span class="red">Dream Car</span></h1>
+          <p>Discover luxury, sports, and family vehicles. Your perfect car is one click away.</p>
+          <div class="hero-buttons">
+            <a href="#cars" class="btn-red">Browse Cars</a>
+            <a href="#services" class="btn-outline">Our Services</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Cars</span></div>
+            <div class="stat"><span class="stat-num">12K+</span><span class="stat-label">Clients</span></div>
+            <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Years</span></div>
+          </div>
+        </div>
+
+        <div class="hero-form-container">
+          <div class="login-card">
+            <h2>Login Here</h2>
+            <p class="sub">Welcome back! Sign in to your account.</p>
+
+            <form onsubmit="return false;">
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email" required />
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <div class="pass-wrap">
+                  <input type="password" id="passInput" placeholder="Enter your password" required />
+                  <button type="button" onclick="togglePass()">
+                    <i class="fas fa-eye" id="passIcon"></i>
+                  </button>
+                </div>
+              </div>
+              <button type="submit" class="btn-login">Login</button>
+            </form>
+
+            <p class="signup">Don't have an account? <a href="#" class="red">Sign up</a></p>
+            <div class="divider"><span></span><small>Log in with</small><span></span></div>
+
+            <div class="socials">
+              <button class="soc-btn"><i class="fab fa-facebook-f"></i></button>
+              <button class="soc-btn"><i class="fab fa-twitter"></i></button>
+              <button class="soc-btn"><i class="fab fa-instagram"></i></button>
+              <button class="soc-btn"><i class="fab fa-google"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="tag">What We Offer</span>
+          <h2>Our <span class="red">Services</span></h2>
+          <p>Everything you need for the perfect car ownership experience.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="icon"><i class="fas fa-car"></i></div>
+            <h3>Car Selling</h3>
+            <p>Premium selection of new and pre-owned vehicles to match your budget.</p>
+            <a href="#">Read More →</a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="icon"><i class="fas fa-tools"></i></div>
+            <h3>Parts Repair</h3>
+            <p>Expert technicians with OEM parts to restore your car to factory condition.</p>
+            <a href="#">Read More →</a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Car Insurance</h3>
+            <p>Comprehensive coverage plans to protect your investment on every journey.</p>
+            <a href="#">Read More →</a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="icon"><i class="fas fa-car-battery"></i></div>
+            <h3>Battery Replacement</h3>
+            <p>Quick battery swap with top-brand units and full warranty included.</p>
+            <a href="#">Read More →</a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="icon"><i class="fas fa-gas-pump"></i></div>
+            <h3>Oil Change</h3>
+            <p>High-performance oil changes to keep your engine running flawlessly.</p>
+            <a href="#">Read More →</a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="icon"><i class="fas fa-headset"></i></div>
+            <h3>24/7 Support</h3>
+            <p>Round-the-clock roadside assistance and customer support.</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cars-section" id="cars">
+      <div class="container">
+        <div class="cars-header">
+          <div>
+            <span class="tag">Our Inventory</span>
+            <h2>Latest <span class="red">Cars</span></h2>
+          </div>
+          <div class="filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="sedan">Sedan</button>
+            <button class="filter" data-filter="suv">SUV</button>
+            <button class="filter" data-filter="sport">Sport</button>
+          </div>
+        </div>
+
+        <div class="cars-grid" id="carsGrid">
+          <div class="car-card reveal" data-category="sedan">
+            <div class="car-img">
+              <img src="images/Mercedes-Benz E-Class.jpg" alt="Mercedes-Benz E-Class" />  
+              <span class="discount">-20%</span>
+              <div class="card-actions">
+                <button class="wish-btn" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+                <button><i class="far fa-eye"></i></button>
+              </div>
+              <button class="add-cart"><i class="fas fa-cart-plus"></i> Add To Cart</button>
+            </div>
+            <div class="car-info">
+              <h3>Mercedes-Benz E-Class</h3>
+              <div class="prices"><span class="new">$52,000</span><span class="old">$65,000</span></div>
+              <div class="stars">★★★★★ <small>(148)</small></div>
+            </div>
+          </div>
+
+          <div class="car-card reveal" data-category="suv">
+            <div class="car-img">
+              <img src="images/BMW X5 M Sport.jpg" alt="BMW X5 M Sport" />
+              <span class="discount">-15%</span>
+              <div class="card-actions">
+                <button class="wish-btn" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+                <button><i class="far fa-eye"></i></button>
+              </div>
+              <button class="add-cart"><i class="fas fa-cart-plus"></i> Add To Cart</button>
+            </div>
+            <div class="car-info">
+              <h3>BMW X5 M Sport</h3>
+              <div class="prices"><span class="new">$78,000</span><span class="old">$92,000</span></div>
+              <div class="stars">★★★★★ <small>(220)</small></div>
+            </div>
+          </div>
+
+          <div class="car-card reveal" data-category="sport">
+            <div class="car-img">
+              <img src="images/Porsche 911 Carrera.jpg" alt="Porsche 911 Carrera" />
+              <span class="discount">-15%</span>
+              <div class="card-actions">
+                <button class="wish-btn" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+                <button><i class="far fa-eye"></i></button>
+              </div>
+              <button class="add-cart"><i class="fas fa-cart-plus"></i> Add To Cart</button>
+            </div>
+            <div class="car-info">
+              <h3>Porsche 911 Carrera</h3>
+              <div class="prices"><span class="new">$115,000</span><span class="old">$135,000</span></div>
+              <div class="stars">★★★★★ <small>(89)</small></div>
+            </div>
+          </div>
+
+          <div class="car-card reveal" data-category="sedan">
+            <div class="car-img">
+              <img src="images/Toyota Camry XSE.jpg" alt="Toyota Camry XSE" />
+              <span class="discount">-16%</span>
+              <div class="card-actions">
+                <button class="wish-btn" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+                <button><i class="far fa-eye"></i></button>
+              </div>
+              <button class="add-cart"><i class="fas fa-cart-plus"></i> Add To Cart</button>
+            </div>
+            <div class="car-info">
+              <h3>Toyota Camry XSE</h3>
+              <div class="prices"><span class="new">$32,000</span><span class="old">$38,000</span></div>
+              <div class="stars">★★★★☆ <small>(312)</small></div>
+            </div>
+          </div>
+
+          <div class="car-card reveal" data-category="suv">
+            <div class="car-img">
+              <img src="images/Range Rover Sport.jpg" alt="Range Rover Sport" />
+              <span class="discount">-14%</span>
+              <div class="card-actions">
+                <button class="wish-btn" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+                <button><i class="far fa-eye"></i></button>
+              </div>
+              <button class="add-cart"><i class="fas fa-cart-plus"></i> Add To Cart</button>
+            </div>
+            <div class="car-info">
+              <h3>Range Rover Sport</h3>
+              <div class="prices"><span class="new">$95,000</span><span class="old">$110,000</span></div>
+              <div class="stars">★★★★★ <small>(175)</small></div>
+            </div>
+          </div>
+
+          <div class="car-card reveal" data-category="sport">
+            <div class="car-img">
+              <img src="images/Ferrari F8 Tributo.jpg" alt="Ferrari F8 Tributo" />
+              <span class="discount">-10%</span>
+              <div class="card-actions">
+                <button class="wish-btn" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+                <button><i class="far fa-eye"></i></button>
+              </div>
+              <button class="add-cart"><i class="fas fa-cart-plus"></i> Add To Cart</button>
+            </div>
+            <div class="car-info">
+              <h3>Ferrari F8 Tributo</h3>
+              <div class="prices"><span class="new">$280,000</span><span class="old">$310,000</span></div>
+              <div class="stars">★★★★★ <small>(56)</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+    <section class="reviews" id="reviews"> 
+      <h1 class="heading">Client's <span>Review</span></h1>
+      <div class="review-slider">
+        <div class="swiper-wrapper">
+          <div class="box reveal">
+            <img src="images/pic-1.png" alt="Arjun">
+            <div class="content">
+              <p>"One place for all cars."</p>
+              <h3>Arjun Munda</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="box reveal">
+            <img src="images/pic-2.png" alt="Amit">
+            <div class="content">
+              <p>"Awesome Service and reasonable prices."</p>
+              <h3>Amit Ranjan</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="box reveal">
+            <img src="images/pic-3.png" alt="Meena">
+            <div class="content">
+              <p>"Showroom that provides all new model cars."</p>
+              <h3>Meena Bind</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+
+          
+            <div class="box reveal">
+               
+                <img src="images/pic-4.png" alt="">
+                <div class="content">
+                    <p>Car and parts are very high quality service.</p>
+                    <h3>Pankaj Kumar </h3>
+                   <div class="stars">
+                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                   </div>
+                </div>
+            </div>
+
+            <div class="box reveal">
+               
+                <img src="images/pic-5.png" alt="">
+                <div class="content">
+                    <p>For New car service and parts, Please visit for the new and feturistic cars model available</p>
+                    <h3>Suman Sharma</h3>
+                    <div class="stars">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box reveal">
+               
+                <img src="images/pic-6.png" alt="">
+                <div class="content">
+                    <p>This is the place where I love to visit casually. Awesome car veriety with outstanding services </p>
+                    <h3>Ajay Kumar</h3>
+                    <div class="stars">
+                       <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                     </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2 class="red">SabaCars</h2>
+          <p>Your trusted premium car dealership.</p>
+          <p><i class="fas fa-phone red"></i> +1 (555) 123-4567</p>
+          <p><i class="fas fa-envelope red"></i> info@SabaCars.com</p>
+          <p><i class="fas fa-map-marker-alt red"></i> 123 Auto Drive, Motor City</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Car Selling</a></li>
+            <li><a href="#">Parts Repair</a></li>
+            <li><a href="#">Car Insurance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 SabaCars. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>
